@@ -1,10 +1,16 @@
 import { Project } from './project';
 import { Todo } from './todo';
+import { deleteElements } from './delete';
+import { createTodoPage } from './todoPage';
 function createHome() {
     const div = document.createElement('div');
-    let project = new Project([]);
-    project.add(new Todo('blah', 'blah', 'blah', 'blah', 'blah'));
-    div.textContent = project.todos[0].title;
+    div.className = "project";
+    let project = new Project([], "Project 1");
+    project.add(new Todo('blah title', 'blah', 'blah', 'blah', 'blah'));
+    div.textContent = project.title;
+    div.addEventListener('click', () => {
+        createTodoPage(project);
+    });
     const body = document.querySelector('body');
     body.append(div);
 }

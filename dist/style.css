@@ -1,0 +1,19 @@
+.project {
+    border: 1px solid black;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.project:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+.todo {
+    border: 1px solid black;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}

@@ -10,10 +10,33 @@
     background-color: rgb(231, 231, 231);
 }
 
-.todo {
+.todo, .project {
     border: 1px solid black;
     text-align: center;
     width: 30%;
     margin: 0 auto;
     padding: 20px 0px;
+    margin-bottom: 10px;
+}
+
+.form {
+    border: 1px solid black;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.input {
+    margin: 7px 0px 25px 0px;
+}
+
+button {
+    margin: 0 auto;
+    width: 150px;
+    display: block;
+}
+
+#add {
+    margin-bottom: 10px;
 }

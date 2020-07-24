@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .project {
     border: 1px solid black;
     text-align: center;
@@ -33,10 +37,11 @@
 
 button {
     margin: 0 auto;
-    width: 150px;
-    display: block;
-}
-
-#add {
     margin-bottom: 10px;
+    width: 200px;
+    display: block;
+    font-family: inherit;
+    font-size: 1em;
+    background-color: rgb(207, 179, 214);
+    border: 1px solid black;
 }

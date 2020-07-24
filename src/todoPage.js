@@ -25,7 +25,7 @@ function createTodoPage(projectList, project) {
         body.appendChild(div);
     }
 
-    const button = createAddButton(project);
+    const button = createAddButton(projectList, project);
     const allProjectsButton = createAllProjectsButton(projectList);
     body.appendChild(button);
     body.appendChild(allProjectsButton);
@@ -117,8 +117,9 @@ function createForm(projectList, project) {
 
     const submit = document.createElement('button');
     submit.textContent = 'Submit';
-    submit.addEventListener('click', () => {
-        project.add(new Todo(titleInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value, notesInput.value));
+    submit.addEventListener('click', (event) => {
+        event.preventDefault();
+        project.todos.push(new Todo(titleInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value, notesInput.value));
         createTodoPage(projectList, project);
     });
 

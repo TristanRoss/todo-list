@@ -65,10 +65,12 @@ function createForm(projectList) {
 
     const submit = document.createElement('button');
     submit.textContent = 'Submit';
-    submit.addEventListener('click', () => {
+    submit.addEventListener('click', (event) => {
+        event.preventDefault();
         projectList.push(new Project([], titleInput.value));
         createHome(projectList);
     });
+    
     
     form.appendChild(titleLabel);
     form.appendChild(br1);

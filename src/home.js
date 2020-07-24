@@ -8,23 +8,27 @@ function createHome(projectList) {
     for (let i = 0; i < projectList.length; i++) {
         const div = makeProjectDiv(projectList[i]);
         div.dataset.index = i;
-        div.textContent = projectList[i].title;
+
         const deleteProjectButton = document.createElement('button');
         deleteProjectButton.textContent = "Complete/Delete Project";
-        deleteProjectButton.addEventListener('click', () => {
+        deleteProjectButton.addEventListener('click', (event) => {
+            event.preventDefault();
             if (projectList.length == 1) {
                 projectList = [];
             } else {
-                project.todos.splice(div.dataset.index, 1);
+                projectList.splice(div.dataset.index, 1);
             }
             createHome(projectList);
         });
 
-        div.addEventListener('click', () => {
+        const todosButton = document.createElement('button');
+        todosButton.textContent = 'View Todos';
+        todosButton.addEventListener('click', () => {
             createTodoPage(projectList, projectList[i]);
         });
-        
+
         div.appendChild(deleteProjectButton);
+        div.appendChild(todosButton);
         body.appendChild(div);
     }
     const button = createAddButton(projectList);

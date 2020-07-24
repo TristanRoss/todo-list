@@ -13,7 +13,8 @@ function createTodoPage(projectList, project) {
         div.dataset.index = i;
         const deleteTodoButton = document.createElement('button');
         deleteTodoButton.textContent = 'Complete/Delete Todo';
-        deleteTodoButton.addEventListener('click', () => {
+        deleteTodoButton.addEventListener('click', (event) => {
+            event.preventDefault();
             if (project.todos.length == 1) {
                 project.todos = [];
             } else {

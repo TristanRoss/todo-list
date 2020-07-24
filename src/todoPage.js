@@ -3,7 +3,6 @@ import { deleteElements, deleteTodoButtons } from './delete';
 import { Todo } from './todo';
 function createTodoPage(projectList, project) {
     deleteElements();
-    console.log(projectList);
     const body = document.querySelector('body');
     if (project.todos.length > 0) {
         project.todos.sort((a, b) => a.priority.localeCompare(b.priority));

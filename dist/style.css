@@ -10,10 +10,6 @@ body {
     padding: 20px 0px;
 }
 
-.project:hover {
-    background-color: rgb(231, 231, 231);
-}
-
 .todo, .project {
     border: 1px solid black;
     text-align: center;
@@ -44,4 +40,9 @@ button {
     font-size: 1em;
     background-color: rgb(207, 179, 214);
     border: 1px solid black;
+}
+
+button:hover {
+    background-color: rgb(127, 53, 148);
+    color: white;
 }

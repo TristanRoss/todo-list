@@ -1,6 +1,31 @@
+@keyframes color {
+    0% {background-color: rgb(116, 96, 96);}
+    25% {background-color: rgb(103, 136, 117);}
+    50% {background-color: rgb(101, 133, 138);}
+    75% {background-color: rgb(153, 151, 126);}
+    100% {background-color: rgb(116, 96, 96);}
+}
+
+@keyframes transparent {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes buttonColor {
+    0% {background-color: rgb(207, 179, 214); color: black; border-color: black;}
+    100% {background-color: rgb(127, 53, 148); color: white; border-color: white;}
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+    color: white;
+    animation-name: color;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
+
 
 .project {
     border: 1px solid black;
@@ -11,16 +36,19 @@ body {
 }
 
 .todo, .project {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     text-align: center;
     width: 30%;
     margin: 0 auto;
     padding: 20px 0px;
     margin-bottom: 10px;
+    animation-name: transparent;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
 }
 
 .form {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     width: 30%;
     margin: 0 auto;
     padding: 20px 0px;
@@ -40,9 +68,16 @@ button {
     font-size: 1em;
     background-color: rgb(207, 179, 214);
     border: 1px solid black;
+    animation-name: transparent;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
 }
 
 button:hover {
+    animation-name: buttonColor;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    border-color: white;
     background-color: rgb(127, 53, 148);
     color: white;
 }

@@ -2,7 +2,6 @@ import { Project } from './project';
 import { deleteElements, deleteProjectButtons } from './delete';
 import { createTodoPage } from './todoPage';
 function createHome(projectList) {
-    localStorage.setItem('list', JSON.stringify(projectList));
     deleteElements();
     const body = document.querySelector('body');
     
